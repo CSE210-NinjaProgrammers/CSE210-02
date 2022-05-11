@@ -49,13 +49,16 @@ class Hilo:
         print('Game over. Thanks for playing!')
             
 
-    def display_card(self): # Tulio
+    def display_card(self): 
         """.It will show first random card for the game.
 
         Args:
             self (Hilo): an instance of Hilo.
         """
-       
+        self.cards.shuffle()
+        self.card = self.cards.value
+        print(f'\nThe card is: {self.card}')
+
     def guess_next_card(self): # Alfred
         """.Select the user's choice to guess whether the next card is greater or less than the first card displayed.
 
@@ -73,12 +76,17 @@ class Hilo:
             self (Hilo): an instance of Hilo.
         """       
         
-    def compare_cards(self): # Livia
+    def compare_cards(self):
         """.Compare the first with the second side and assign score to the player depending on the choice the player has made to guess.
 
         Args:
             self (Hilo): an instance of Hilo.
         """
+        if (self.higher_or_lower == 'l' and self.next_card < self.card ) or (self.higher_or_lower == 'h' and self.next_card > self.card ): 
+            self.score += 100
+        else:
+            self.score -= 75
+        
 
        
     def display_score(self):
@@ -87,9 +95,10 @@ class Hilo:
         Args:
             self (Hilo): an instance of Hilo.
         """
+        print(f'Your score is: {self.score}')
 
     
-    def get_playing_decision(self): # Eric
+    def get_playing_decision(self):
         """. Allows the user to decide whether they want to continue playing or not.
 
         Args:
