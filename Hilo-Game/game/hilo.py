@@ -89,7 +89,7 @@ class Hilo:
         """
 
     
-    def get_playing_decision(self): # Eric
+    def get_playing_decision(self):
         """. Allows the user to decide whether they want to continue playing or not.
 
         Args:
