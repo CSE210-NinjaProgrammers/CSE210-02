@@ -22,6 +22,13 @@ class Hilo:
         Args:
             self (Hilo): an instance of Hilo.
         """
+        self.cards = Cards()
+        self.is_playing = True
+        self.score = 300
+        self.card = 0
+        self.next_card = 0
+        self.higher_or_lower = ""
+        self.play_again = ""
 
         
 
@@ -31,16 +38,25 @@ class Hilo:
         Args:
             self (Hilo): an instance of Hilo.
         """
+        while self.is_playing:
+            self.display_card()
+            self.guess_next_card()
+            self.display_next_card()
+            self.compare_cards()
+            self.display_score()
+            self.get_playing_decision()
 
+        print('Game over. Thanks for playing!')
+            
 
-    def display_card(self):
+    def display_card(self): # Tulio
         """.It will show first random card for the game.
 
         Args:
             self (Hilo): an instance of Hilo.
         """
        
-    def guess_next_card(self):
+    def guess_next_card(self): # Alfred
         """.Select the user's choice to guess whether the next card is greater or less than the first card displayed.
 
         Args:
@@ -48,14 +64,14 @@ class Hilo:
         """       
 
 
-    def display_next_card(self):
+    def display_next_card(self): # Juan
         """. It will show next random card for the game.
 
         Args:
             self (Hilo): an instance of Hilo.
         """       
         
-    def compare_cards(self):
+    def compare_cards(self): # Livia
         """.Compare the first with the second side and assign score to the player depending on the choice the player has made to guess.
 
         Args:
@@ -71,9 +87,18 @@ class Hilo:
         """
 
     
-    def get_playing_decision(self):
+    def get_playing_decision(self): # Eric
         """. Allows the user to decide whether they want to continue playing or not.
 
         Args:
             self (Hilo): an instance of Hilo.
         """
+
+        if (self.score <= 0):
+            self.is_playing = False
+            return
+        else:
+            self.play_again = input('Play again? [y/n] ')
+            self.is_playing = (self.play_again == 'y')
+
+
