@@ -49,7 +49,7 @@ class Hilo:
         print('Game over. Thanks for playing!')
             
 
-    def display_card(self): # Tulio
+    def display_card(self): 
         """.It will show first random card for the game.
 
         Args:
@@ -73,12 +73,17 @@ class Hilo:
             self (Hilo): an instance of Hilo.
         """       
         
-    def compare_cards(self): # Livia
+    def compare_cards(self):
         """.Compare the first with the second side and assign score to the player depending on the choice the player has made to guess.
 
         Args:
             self (Hilo): an instance of Hilo.
         """
+        if (self.higher_or_lower == 'l' and self.next_card < self.card ) or (self.higher_or_lower == 'h' and self.next_card > self.card ): 
+            self.score += 100
+        else:
+            self.score -= 75
+        
 
        
     def display_score(self):
@@ -87,6 +92,7 @@ class Hilo:
         Args:
             self (Hilo): an instance of Hilo.
         """
+        print(f'Your score is: {self.score}')
 
     
     def get_playing_decision(self):

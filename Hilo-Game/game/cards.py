@@ -20,7 +20,7 @@ class Cards:
         self.score = 0
       
 
-    def shuffle(self): # Tulio
+    def shuffle(self): 
         """Generates a new random value.
         
         Args:
