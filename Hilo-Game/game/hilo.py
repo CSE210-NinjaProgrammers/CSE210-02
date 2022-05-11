@@ -49,13 +49,16 @@ class Hilo:
         print('Game over. Thanks for playing!')
             
 
-    def display_card(self): # Tulio
+    def display_card(self): 
         """.It will show first random card for the game.
 
         Args:
             self (Hilo): an instance of Hilo.
         """
-       
+        self.cards.shuffle()
+        self.card = self.cards.value
+        print(f'\nThe card is: {self.card}')
+
     def guess_next_card(self): # Alfred
         """.Select the user's choice to guess whether the next card is greater or less than the first card displayed.
 
