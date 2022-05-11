@@ -24,5 +24,5 @@ class Cards:
         Args:
             self (Cards): An instance of Cards.
         """
-        self.value = random.randint(1, 13)
+        self.value = random.randint(1, 14)
       
