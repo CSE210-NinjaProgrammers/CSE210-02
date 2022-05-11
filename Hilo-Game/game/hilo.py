@@ -61,7 +61,9 @@ class Hilo:
 
         Args:
             self (Hilo): an instance of Hilo.
-        """       
+        """ 
+        guess_hi_or_low = input("Higher or Lower [h/l] ")      
+        self.display_next_card = guess_hi_or_low 
 
 
     def display_next_card(self): # Juan

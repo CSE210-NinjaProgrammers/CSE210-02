@@ -16,6 +16,8 @@ class Cards:
         Args:
             self (Cards): An instance of Cards.
         """
+        self.value = 0
+        self.score = 0
       
 
     def shuffle(self): # Tulio
