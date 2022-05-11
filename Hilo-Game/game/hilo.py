@@ -55,16 +55,15 @@ class Hilo:
         Args:
             self (Hilo): an instance of Hilo.
         """
-        self.cards.shuffle()
-        self.card = self.cards.value
-        print(f'\nThe card is: {self.card}')
-
-    def guess_next_card(self): # Alfred
+       
+    def guess_next_card(self):
         """.Select the user's choice to guess whether the next card is greater or less than the first card displayed.
 
         Args:
             self (Hilo): an instance of Hilo.
-        """       
+        """ 
+        guess_hi_or_low = input("Higher or Lower [h/l] ")      
+        self.display_next_card = guess_hi_or_low 
 
 
     def display_next_card(self): # Juan
