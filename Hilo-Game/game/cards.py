@@ -10,7 +10,7 @@ class Cards:
         value (int): .Store the value of the card between number 1 and 13.
     """
 
-    def __init__(self):
+    def __init__(self): # Alfred
         """Constructs a new instance of Cards.
 
         Args:
@@ -18,7 +18,7 @@ class Cards:
         """
       
 
-    def shuffle(self):
+    def shuffle(self): # Tulio
         """Generates a new random value.
         
         Args:
