@@ -69,12 +69,15 @@ class Hilo:
         self.display_next_card = guess_hi_or_low 
 
 
-    def display_next_card(self): # Juan
+    def display_next_card(self): 
         """. It will show next random card for the game.
 
         Args:
             self (Hilo): an instance of Hilo.
         """       
+        self.cards.shuffle()
+        self.next_card = self.cards.value
+        print(f'\nNext card was: {self.next_card}')
         
     def compare_cards(self):
         """.Compare the first with the second side and assign score to the player depending on the choice the player has made to guess.
