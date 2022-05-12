@@ -64,9 +64,11 @@ class Hilo:
 
         Args:
             self (Hilo): an instance of Hilo.
-        """ 
-        guess_hi_or_low = input("Higher or Lower [h/l] ")      
-        self.display_next_card = guess_hi_or_low 
+        """
+        self.higher_or_lower = ""
+        while self.higher_or_lower.lower() != "h" and self.higher_or_lower.lower() != "l": 
+            guess_hi_or_low = input("Higher or Lower [h/l]: ")      
+            self.higher_or_lower = guess_hi_or_low.lower() 
 
 
     def display_next_card(self): 
@@ -77,7 +79,7 @@ class Hilo:
         """       
         self.cards.shuffle()
         self.next_card = self.cards.value
-        print(f'\nNext card was: {self.next_card}')
+        print(f'Next card was: {self.next_card}')
         
     def compare_cards(self):
         """.Compare the first with the second side and assign score to the player depending on the choice the player has made to guess.
@@ -91,7 +93,7 @@ class Hilo:
             self.score -= 75
         
 
-       
+      
     def display_score(self):
         """. Displays the player's current score.
 
@@ -107,12 +109,13 @@ class Hilo:
         Args:
             self (Hilo): an instance of Hilo.
         """
-
+        self.play_again = ""
         if (self.score <= 0):
             self.is_playing = False
             return
         else:
-            self.play_again = input('Play again? [y/n] ')
-            self.is_playing = (self.play_again == 'y')
+            while  self.play_again.lower() != "y" and self.play_again.lower() != "n":
+                self.play_again = input('Play again? [y/n] ')
+                self.is_playing = (self.play_again.lower() == 'y')
 
 
