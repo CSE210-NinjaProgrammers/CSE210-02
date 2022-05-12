@@ -19,7 +19,7 @@ project folder. Select the main module inside the dice folder and click the "run
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- Hilo                (source code for game)
++-- Hilo-Game           (source code for game)
   +-- game              (specific classes)
   +-- __main__.py       (program entry point)
 +-- README.md           (general info)
@@ -31,8 +31,8 @@ root                    (project root folder)
 
 ## Authors
 ---
-Eric Farley
-Tulio Banegas
-Livia Pimentel
-Alfred Kamisesse
-Juan David Estrada
+* Eric Farley        (ericfarley96@gmail.com)
+* Tulio Banegas      (trbanegas14@gmail.com)
+* Livia Pimentel     (livia_macedo89@yahoo.com.br)
+* Alfred Kamisesse   (reeves.kamisese@gmail.com)
+* Juan David Estrada (jdemachado1105@gmail.com)
